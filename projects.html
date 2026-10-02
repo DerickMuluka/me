@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All projects by Derick Muluka — Full-Stack Developer & IT Trainer.">
+    <meta name="theme-color" content="#0d1117">
+    <link rel="icon" href="assets/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/base/typography.css">
+    <link rel="stylesheet" href="css/components/terminal.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/layout/grid.css">
+    <link rel="stylesheet" href="css/layout/sections.css">
+    <link rel="stylesheet" href="css/layout/footer.css">
+    <link rel="stylesheet" href="css/effects/glassmorphism.css">
+    <link rel="stylesheet" href="css/pages/projects.css">
+    <title>Projects | Derick Muluka</title>
+</head>
+<body>
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">[</span><span class="logo-text">DM</span><span class="logo-bracket">]</span>
+                <span class="logo-status" aria-hidden="true">●</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                    <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="status-bar">
+            <span class="status-item"><i class="fas fa-code-branch"></i><span>main</span></span>
+            <span class="status-item"><i class="fas fa-circle status-dot"></i><span>Available for work</span></span>
+            <span class="status-item time" id="clock"></span>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-header">
+            <span class="prompt">derick@portfolio:~$</span>
+            <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html#home" class="mobile-link"><span class="prompt-symbol">$</span> cd /home</a></li>
+            <li><a href="projects.html" class="mobile-link"><span class="prompt-symbol">$</span> ls projects/</a></li>
+            <li><a href="index.html#contact" class="mobile-link"><span class="prompt-symbol">$</span> ssh contact</a></li>
+        </ul>
+    </div>
+
+    <main class="projects-page">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-prompt">derick@portfolio:~$ ls projects/</span>
+                <h1 class="section-title">All Projects</h1>
+                <p class="projects-intro">
+                    A collection of web and desktop applications built with HTML, CSS,
+                    PHP, JavaScript, and MySQL — plus a Java desktop app and a network
+                    engineering project.
+                </p>
+            </div>
+
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="network">Networking</button>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card glass-card" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/projects/edusphere.jpg" alt="EduSphere" loading="lazy">
+                        <span class="project-badge">Web</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>EduSphere</h3>
+                        <p>Personalized learning platform for students with project-based learning paths.</p>
+                        <div class="project-tech"><span>HTML</span><span>CSS</span><span>PHP</span><span>JavaScript</span><span>MySQL</span></div>
+                        <a href="project-details/edusphere.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project-card glass-card" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/projects/virtual-classroom.jpg" alt="Virtual Classroom" loading="lazy">
+                        <span class="project-badge">Web</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Virtual Classroom</h3>
+                        <p>Online learning environment with lessons, chat, and resource sharing.</p>
+                        <div class="project-tech"><span>HTML</span><span>CSS</span><span>PHP</span><span>JavaScript</span><span>MySQL</span></div>
+                        <a href="project-details/virtual-classroom.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project-card glass-card" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/projects/sonicwave.jpg" alt="SonicWave" loading="lazy">
+                        <span class="project-badge">Web</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>SonicWave</h3>
+                        <p>Music streaming platform with playlists, favorites, and a simple player.</p>
+                        <div class="project-tech"><span>HTML</span><span>CSS</span><span>PHP</span><span>JavaScript</span><span>MySQL</span></div>
+                        <a href="project-details/sonicwave.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project-card glass-card" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/projects/voting-system.jpg" alt="Voting System" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Voting Management System</h3>
+                        <p>Secure online voting with voter registration and live results.</p>
+                        <div class="project-tech"><span>HTML</span><span>CSS</span><span>PHP</span><span>JavaScript</span><span>MySQL</span></div>
+                        <a href="project-details/voting-system.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project-card glass-card" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/projects/house-rental.jpg" alt="House Rental" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>House Rental System</h3>
+                        <p>Property listing platform connecting landlords and tenants.</p>
+                        <div class="project-tech"><span>HTML</span><span>CSS</span><span>PHP</span><span>JavaScript</span><span>MySQL</span></div>
+                        <a href="project-details/house-rental.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project-card glass-card" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/projects/asset-management.jpg" alt="Asset Management" loading="lazy">
+                        <span class="project-badge">Web</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Asset Management System</h3>
+                        <p>Track, manage, and audit organizational assets with request workflows.</p>
+                        <div class="project-tech"><span>HTML</span><span>CSS</span><span>PHP</span><span>JavaScript</span><span>MySQL</span></div>
+                        <a href="project-details/asset-management.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project-card glass-card" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/projects/membership-management.jpg" alt="Membership Management" loading="lazy">
+                        <span class="project-badge">Web</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Membership Management System</h3>
+                        <p>Member registration, payments, renewals, and reporting in one platform.</p>
+                        <div class="project-tech"><span>HTML</span><span>CSS</span><span>PHP</span><span>JavaScript</span><span>MySQL</span></div>
+                        <a href="project-details/membership-management.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project-card glass-card" data-category="java">
+                    <div class="project-image">
+                        <img src="assets/images/projects/library-management.jpg" alt="Library Management" loading="lazy">
+                        <span class="project-badge">Java</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Library Management System</h3>
+                        <p>Java desktop application for managing books, members, and borrowings.</p>
+                        <div class="project-tech"><span>Java</span><span>Swing</span><span>MySQL</span></div>
+                        <a href="project-details/library-management.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project-card glass-card" data-category="network">
+                    <div class="project-image">
+                        <img src="assets/images/projects/network-design.png" alt="Network Design" loading="lazy">
+                        <span class="project-badge">Network</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Campus Network Design</h3>
+                        <p>Campus network infrastructure with VLANs, security, and redundancy.</p>
+                        <div class="project-tech"><span>Cisco</span><span>Wireshark</span><span>Security</span></div>
+                        <a href="project-details/network-design.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo"><span class="logo-bracket">[</span>DM<span class="logo-bracket">]</span></span>
+                    <p>Building practical web solutions from Mombasa to the world.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com/DerickMuluka" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/derickmuluka" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="mailto:mulukaderick@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="terminal-text"><span class="prompt">$</span> echo "© <span id="year"></span> Derick Muluka. All rights reserved."</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="js/utils/debounce.js"></script>
+    <script src="js/modules/navigation.js"></script>
+    <script src="js/modules/animations.js"></script>
+    <script src="js/modules/projects-filter.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
