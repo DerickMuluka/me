@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EduSphere — Learning platform built with HTML, CSS, PHP, JavaScript, and MySQL.">
+    <meta name="theme-color" content="#f8f9fa">
+    <link rel="icon" href="../assets/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/variables.css">
+    <link rel="stylesheet" href="../css/base/typography.css">
+    <link rel="stylesheet" href="../css/components/navigation.css">
+    <link rel="stylesheet" href="../css/layout/grid.css">
+    <link rel="stylesheet" href="../css/layout/footer.css">
+    <link rel="stylesheet" href="../css/pages/project-detail.css">
+    <title>EduSphere | Derick Muluka</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-bracket">[</span><span class="logo-text">DM</span><span class="logo-bracket">]</span>
+                <span class="logo-status" aria-hidden="true">●</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                    <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-header">
+            <span class="prompt">derick@portfolio:~$</span>
+            <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="../index.html#home" class="mobile-link"><span class="prompt-symbol">$</span> cd /home</a></li>
+            <li><a href="../projects.html" class="mobile-link"><span class="prompt-symbol">$</span> ls projects/</a></li>
+            <li><a href="../index.html#contact" class="mobile-link"><span class="prompt-symbol">$</span> ssh contact</a></li>
+        </ul>
+    </div>
+
+    <main class="project-detail-page">
+        <div class="container">
+            <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+
+            <div class="project-header">
+                <div class="project-header-meta">
+                    <span>Web App</span>
+                    <span>2025</span>
+                    <span>Full-Stack</span>
+                </div>
+                <h1 class="project-detail-title">EduSphere</h1>
+                <p class="project-detail-subtitle">
+                    A learning platform that gives students personalized, project-based
+                    learning paths with progress tracking and simple analytics.
+                </p>
+            </div>
+
+            <img src="../assets/images/projects/edusphere.jpg" alt="EduSphere platform" class="project-detail-image">
+
+            <div class="project-detail-grid">
+                <div class="project-detail-main">
+                    <div class="project-detail-section">
+                        <h2>Overview</h2>
+                        <p>
+                            EduSphere is a web-based learning platform designed for
+                            students who learn best by doing. Instead of static courses,
+                            it presents structured projects that students complete step
+                            by step.
+                        </p>
+                        <p>
+                            The platform includes student accounts, project catalogs,
+                            progress tracking, and a simple dashboard that shows what
+                            each student is working on.
+                        </p>
+                    </div>
+
+                    <div class="project-detail-section">
+                        <h2>Key Features</h2>
+                        <ul>
+                            <li>Student registration and login system</li>
+                            <li>Project catalog organized by difficulty and topic</li>
+                            <li>Progress tracking for each enrolled project</li>
+                            <li>Student dashboard with learning activity</li>
+                            <li>Admin panel for managing projects and students</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-detail-section">
+                        <h2>Technical Details</h2>
+                        <p>
+                            Built with HTML, CSS, PHP, and JavaScript on the frontend
+                            and server side, with MySQL as the database. The backend
+                            handles authentication, project management, and progress
+                            tracking through clean PHP scripts.
+                        </p>
+                        <p>
+                            The database stores users, projects, enrollments, and
+                            progress records. JavaScript handles form validation and
+                            interactive elements on the dashboard.
+                        </p>
+                    </div>
+                </div>
+
+                <aside class="project-detail-sidebar">
+                    <div class="project-sidebar-card">
+                        <h4>Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="project-sidebar-card">
+                        <h4>Details</h4>
+                        <ul class="project-sidebar-list">
+                            <li><span>Category</span><strong>Web App</strong></li>
+                            <li><span>Status</span><strong>Completed</strong></li>
+                            <li><span>Type</span><strong>Personal</strong></li>
+                            <li><span>Year</span><strong>2025</strong></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="terminal-text"><span class="prompt">$</span> echo "© <span id="year"></span> Derick Muluka. All rights reserved."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils/debounce.js"></script>
+    <script src="../js/modules/navigation.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

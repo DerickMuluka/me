@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Asset Management System — Track and manage organizational assets with HTML, CSS, PHP, JavaScript, and MySQL.">
+    <meta name="theme-color" content="#f8f9fa">
+    <link rel="icon" href="../assets/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/variables.css">
+    <link rel="stylesheet" href="../css/base/typography.css">
+    <link rel="stylesheet" href="../css/components/navigation.css">
+    <link rel="stylesheet" href="../css/layout/grid.css">
+    <link rel="stylesheet" href="../css/layout/footer.css">
+    <link rel="stylesheet" href="../css/pages/project-detail.css">
+    <title>Asset Management System | Derick Muluka</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-bracket">[</span><span class="logo-text">DM</span><span class="logo-bracket">]</span>
+                <span class="logo-status" aria-hidden="true">●</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                    <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-header">
+            <span class="prompt">derick@portfolio:~$</span>
+            <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="../index.html#home" class="mobile-link"><span class="prompt-symbol">$</span> cd /home</a></li>
+            <li><a href="../projects.html" class="mobile-link"><span class="prompt-symbol">$</span> ls projects/</a></li>
+            <li><a href="../index.html#contact" class="mobile-link"><span class="prompt-symbol">$</span> ssh contact</a></li>
+        </ul>
+    </div>
+
+    <main class="project-detail-page">
+        <div class="container">
+            <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+
+            <div class="project-header">
+                <div class="project-header-meta">
+                    <span>Web App</span>
+                    <span>2025</span>
+                    <span>Full-Stack</span>
+                </div>
+                <h1 class="project-detail-title">Asset Management System</h1>
+                <p class="project-detail-subtitle">
+                    A system for tracking, managing, and auditing organizational assets
+                    with request workflows and reporting.
+                </p>
+            </div>
+
+            <img src="../assets/images/projects/asset-management.jpg" alt="Asset Management System dashboard" class="project-detail-image">
+
+            <div class="project-detail-grid">
+                <div class="project-detail-main">
+                    <div class="project-detail-section">
+                        <h2>Overview</h2>
+                        <p>
+                            The Asset Management System helps organizations keep track
+                            of their physical assets — equipment, furniture, electronics,
+                            and more. It replaces spreadsheets with a proper database
+                            solution.
+                        </p>
+                        <p>
+                            The system supports the full asset lifecycle: acquisition,
+                            assignment, tracking, and disposal, with role-based access
+                            for administrators and staff.
+                        </p>
+                    </div>
+
+                    <div class="project-detail-section">
+                        <h2>Key Features</h2>
+                        <ul>
+                            <li>Asset catalog with categories and conditions</li>
+                            <li>Request and approval workflow for asset issuance</li>
+                            <li>Return tracking with condition assessment</li>
+                            <li>Guest portal for browsing available assets</li>
+                            <li>Reporting dashboard with asset value analytics</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-detail-section">
+                        <h2>Technical Details</h2>
+                        <p>
+                            Built with HTML, CSS, PHP, JavaScript, and MySQL. The
+                            database schema is designed around the asset lifecycle,
+                            with tables for assets, categories, departments, requests,
+                            and users.
+                        </p>
+                        <p>
+                            PHP handles all server-side logic including authentication,
+                            request processing, and report generation. JavaScript
+                            manages interactive forms and dynamic filtering.
+                        </p>
+                    </div>
+                </div>
+
+                <aside class="project-detail-sidebar">
+                    <div class="project-sidebar-card">
+                        <h4>Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="project-sidebar-card">
+                        <h4>Details</h4>
+                        <ul class="project-sidebar-list">
+                            <li><span>Category</span><strong>Web App</strong></li>
+                            <li><span>Status</span><strong>Completed</strong></li>
+                            <li><span>Type</span><strong>Academic</strong></li>
+                            <li><span>Year</span><strong>2025</strong></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="terminal-text"><span class="prompt">$</span> echo "© <span id="year"></span> Derick Muluka. All rights reserved."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils/debounce.js"></script>
+    <script src="../js/modules/navigation.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
