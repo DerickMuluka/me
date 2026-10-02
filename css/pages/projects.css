@@ -1,0 +1,10 @@
+.projects-page {
+    padding-top: calc(var(--header-height) + 60px);
+    padding-bottom: var(--space-3xl);
+}
+
+.projects-intro {
+    max-width: 640px;
+    color: var(--text-secondary);
+    margin-top: var(--space-sm);
+}

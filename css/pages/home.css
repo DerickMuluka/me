@@ -1,0 +1,30 @@
+.hero-terminal { animation: terminal-appear 0.7s ease-out; }
+
+@keyframes terminal-appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.terminal-line { opacity: 0; animation: fade-in 0.3s ease-out forwards; }
+.terminal-line:nth-child(1) { animation-delay: 0.2s; }
+.terminal-line:nth-child(3) { animation-delay: 0.9s; }
+.terminal-line:nth-child(5) { animation-delay: 1.6s; }
+.terminal-line:nth-child(7) { animation-delay: 2.3s; }
+
+.terminal-output { opacity: 0; animation: fade-in 0.4s ease-out forwards; }
+.terminal-output:nth-child(2) { animation-delay: 0.5s; }
+.terminal-output:nth-child(4) { animation-delay: 1.2s; }
+.terminal-output:nth-child(6) { animation-delay: 1.9s; }
+
+@keyframes fade-in { to { opacity: 1; } }
+
+.delay-1 { animation-delay: 1.2s; opacity: 0; animation-fill-mode: forwards; animation-name: fade-in; animation-duration: 0.4s; animation-timing-function: ease-out; }
+.delay-2 { animation-delay: 1.9s; opacity: 0; animation-fill-mode: forwards; animation-name: fade-in; animation-duration: 0.4s; animation-timing-function: ease-out; }
+.delay-3 { animation-delay: 2.6s; opacity: 0; animation-fill-mode: forwards; animation-name: fade-in; animation-duration: 0.4s; animation-timing-function: ease-out; }
+.delay-4 { animation-delay: 3.1s; opacity: 0; animation-fill-mode: forwards; animation-name: fade-in; animation-duration: 0.4s; animation-timing-function: ease-out; }
+
+@media (max-width: 768px) {
+    .terminal-body { padding: var(--space-md); }
+    .terminal-line { font-size: 0.78rem; }
+    .hero-description { font-size: 0.85rem; }
+}

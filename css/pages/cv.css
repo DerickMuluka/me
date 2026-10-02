@@ -1,0 +1,139 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #eef1f6;
+    color: #1a202c;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cv-toolbar {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    z-index: 100;
+}
+
+.cv-toolbar-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cv-toolbar-title { font-weight: 600; font-size: 0.95rem; color: #2d3748; }
+.cv-toolbar-actions { display: flex; gap: 0.5rem; }
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.cv-btn-primary { background: #2d3748; color: #ffffff; }
+.cv-btn-primary:hover { background: #1a202c; }
+.cv-btn-outline { background: transparent; color: #4a5568; border-color: #cbd5e0; }
+.cv-btn-outline:hover { background: #f7fafc; border-color: #a0aec0; }
+
+.cv-page {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cv-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #2d3748;
+    margin-bottom: 1.75rem;
+}
+
+.cv-name { font-size: 2rem; font-weight: 700; color: #1a202c; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
+.cv-role { font-size: 1rem; color: #4a5568; font-weight: 500; }
+.cv-header-contact { text-align: right; font-size: 0.82rem; color: #4a5568; line-height: 1.7; }
+
+.cv-section { margin-bottom: 1.75rem; }
+
+.cv-section-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #2d3748;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 0.9rem;
+}
+
+.cv-text { font-size: 0.9rem; color: #2d3748; line-height: 1.65; }
+.cv-item { margin-bottom: 1.1rem; }
+.cv-item:last-child { margin-bottom: 0; }
+
+.cv-item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.cv-item-head h3 { font-size: 0.98rem; font-weight: 600; color: #1a202c; }
+.cv-item-date { font-size: 0.78rem; color: #718096; font-weight: 500; white-space: nowrap; }
+.cv-item-sub { font-size: 0.85rem; color: #4a5568; font-style: italic; margin-bottom: 0.35rem; }
+.cv-list { list-style: none; padding-left: 0; }
+
+.cv-list li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.85rem;
+    color: #2d3748;
+    line-height: 1.6;
+    margin-bottom: 0.2rem;
+}
+
+.cv-list li::before { content: '•'; position: absolute; left: 0; color: #4a5568; font-weight: 700; }
+
+.cv-skills { display: grid; gap: 0.7rem; }
+.cv-skill-group h4 { font-size: 0.82rem; font-weight: 600; color: #2d3748; margin-bottom: 0.15rem; }
+.cv-skill-group p { font-size: 0.85rem; color: #4a5568; line-height: 1.6; }
+
+.cv-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.8rem;
+    color: #718096;
+    text-align: center;
+    font-style: italic;
+}
+
+@media print {
+    body { background: #ffffff; }
+    .no-print { display: none !important; }
+    .cv-page { max-width: 100%; margin: 0; padding: 1.2cm 1.5cm; box-shadow: none; border-radius: 0; }
+    .cv-section, .cv-item { page-break-inside: avoid; }
+    @page { size: A4; margin: 0; }
+}
+
+@media (max-width: 700px) {
+    .cv-toolbar-inner { flex-direction: column; align-items: stretch; text-align: center; }
+    .cv-toolbar-actions { justify-content: center; }
+    .cv-page { margin: 1rem; padding: 1.5rem; }
+    .cv-header { grid-template-columns: 1fr; gap: 1rem; }
+    .cv-header-contact { text-align: left; }
+    .cv-name { font-size: 1.6rem; }
+    .cv-item-head { flex-direction: column; gap: 0.2rem; }
+}
